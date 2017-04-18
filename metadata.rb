@@ -4,7 +4,7 @@ maintainer_email 'bgeach@ur-sltn.com'
 license 'all_rights'
 description 'Installs/Configures workstation'
 long_description 'Installs/Configures workstation'
-version '0.2.0'
+version '0.2.1'
 
 
 # If you upload to Supermarket you should set this so your cookbook

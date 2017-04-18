@@ -9,13 +9,8 @@ package 'ntp' do
 end
 node['ipaddress']
 node['memory']['total']
-file '/etc/motd' do
-  content "Fuck Me
-  IPADDRESS: #{node['ipaddress']}
-  HOSTNAME: #{node['hostname']}
-  MEMORY: #{node['memory']['total']}
-  CPU: 
-"
+template '/etc/motd' do
+  source 'motd.erb' 
   action :create
   owner 'root'
   group 'root'
