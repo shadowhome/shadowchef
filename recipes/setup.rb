@@ -7,8 +7,15 @@ end
 package 'ntp' do
   action :install
 end
+node['ipaddress']
+node['memory']['total']
 file '/etc/motd' do
-  content 'Fuck Me'
+  content "Fuck Me
+  IPADDRESS: #{node['ipaddress']}
+  HOSTNAME: #{node['hostname']}
+  MEMORY: #{node['memory']['total']}
+  CPU: 
+"
   action :create
   owner 'root'
   group 'root'
